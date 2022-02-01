@@ -1,0 +1,78 @@
+namespace = perma_planertery_decisions
+
+# Check luxury cost
+planet_event = {
+	id = perma_planertery_decisions.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_planet_flag = has_perma_luxuries_boost
+		has_modifier = planet_luxuries_boost
+		OR = {
+			has_deposit = perma_luxuries_boost_deposit_0
+			has_deposit = perma_luxuries_boost_deposit_1
+			has_deposit = perma_luxuries_boost_deposit_2
+			has_deposit = perma_luxuries_boost_deposit_3
+			has_deposit = perma_luxuries_boost_deposit_4
+			has_deposit = perma_luxuries_boost_deposit_5
+			has_deposit = perma_luxuries_boost_deposit_6
+			has_deposit = perma_luxuries_boost_deposit_7
+			has_deposit = perma_luxuries_boost_deposit_8
+			has_deposit = perma_luxuries_boost_deposit_9
+		}
+	}
+
+	immediate = {
+		remove_deposit = perma_luxuries_boost_deposit_0
+		remove_deposit = perma_luxuries_boost_deposit_1
+		remove_deposit = perma_luxuries_boost_deposit_2
+		remove_deposit = perma_luxuries_boost_deposit_3
+		remove_deposit = perma_luxuries_boost_deposit_4
+		remove_deposit = perma_luxuries_boost_deposit_5
+		remove_deposit = perma_luxuries_boost_deposit_6
+		remove_deposit = perma_luxuries_boost_deposit_7
+		remove_deposit = perma_luxuries_boost_deposit_8
+		remove_deposit = perma_luxuries_boost_deposit_9
+
+		if = {
+  			limit = { num_pops < 10 }
+  			add_deposit = perma_luxuries_boost_deposit_0
+		}
+		else_if = {
+  			limit = { num_pops < 20 }
+  			add_deposit = perma_luxuries_boost_deposit_1
+		}
+		else_if = {
+  			limit = { num_pops < 30 }
+  			add_deposit = perma_luxuries_boost_deposit_2
+		}
+		else_if = {
+  			limit = { num_pops < 40 }
+  			add_deposit = perma_luxuries_boost_deposit_3
+		}
+		else_if = {
+  			limit = { num_pops < 50 }
+  			add_deposit = perma_luxuries_boost_deposit_4
+		}
+		else_if = {
+  			limit = { num_pops < 60 }
+  			add_deposit = perma_luxuries_boost_deposit_5
+		}
+		else_if = {
+  			limit = { num_pops < 70 }
+  			add_deposit = perma_luxuries_boost_deposit_6
+		}
+		else_if = {
+  			limit = { num_pops < 85 }
+  			add_deposit = perma_luxuries_boost_deposit_7
+		}
+		else_if = {
+  			limit = { num_pops < 100 }
+  			add_deposit = perma_luxuries_boost_deposit_8
+		}
+		else = {
+  			add_deposit = perma_luxuries_boost_deposit_9
+		}
+	}
+}

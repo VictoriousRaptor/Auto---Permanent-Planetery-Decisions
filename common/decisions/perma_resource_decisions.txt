@@ -1,0 +1,134 @@
+decision_planet_perma_food_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		owner = {
+			is_regular_empire = yes
+			is_lithoid_empire = no
+			is_ai = no
+		}
+		NOR = {
+			has_modifier = planet_growth_discouraged
+			has_modifier = planet_population_control
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = "planet_food_boost"
+		}
+		hidden_effect = {
+			add_deposit = perma_food_boost_deposit
+			set_planet_flag = has_perma_food_boost
+		}
+	}
+}
+
+decision_planet_remove_perma_food_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+
+	potential = {
+		owner = {
+			is_regular_empire = yes
+			is_lithoid_empire = no
+			is_ai = no
+		}
+		AND = {
+			has_planet_flag = has_perma_food_boost
+			has_deposit = perma_food_boost_deposit
+		}
+	}
+
+	effect = {
+		remove_modifier = planet_food_boost
+		hidden_effect = {
+			remove_deposit = perma_food_boost_deposit
+			remove_planet_flag = has_perma_food_boost
+		}
+	}
+}
+
+decision_planet_perma_luxuries_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	potential = {
+		owner = {
+			is_regular_empire = yes
+			is_ai = no
+		}
+		NOR = {
+			has_modifier = planet_luxuries_boost  # ongoing vanilla boost
+			has_planet_flag = has_perma_luxuries_boost
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = "planet_luxuries_boost"
+		}
+		hidden_effect = {
+			# planet_event = {
+			# 	id = permanent_decisions.0
+			# }
+			set_planet_flag = has_perma_luxuries_boost
+		}
+	}
+}
+
+decision_planet_remove_perma_luxuries_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+	potential = {
+		owner = {
+			is_regular_empire = yes
+		}
+		owner = {
+			is_ai = no
+		}
+		AND = {
+			has_modifier = planet_luxuries_boost
+			has_planet_flag = has_perma_luxuries_boost
+			OR = {
+				has_deposit = perma_luxuries_boost_deposit_0
+				has_deposit = perma_luxuries_boost_deposit_1
+				has_deposit = perma_luxuries_boost_deposit_2
+				has_deposit = perma_luxuries_boost_deposit_3
+				has_deposit = perma_luxuries_boost_deposit_4
+				has_deposit = perma_luxuries_boost_deposit_5
+				has_deposit = perma_luxuries_boost_deposit_6
+				has_deposit = perma_luxuries_boost_deposit_7
+				has_deposit = perma_luxuries_boost_deposit_8
+				has_deposit = perma_luxuries_boost_deposit_9
+			}
+		}
+	}
+	effect = {
+		remove_modifier = planet_luxuries_boost
+		hidden_effect = {
+			remove_planet_flag = has_perma_luxuries_boost
+			remove_deposit = perma_luxuries_boost_deposit_0
+			remove_deposit = perma_luxuries_boost_deposit_1
+			remove_deposit = perma_luxuries_boost_deposit_2
+			remove_deposit = perma_luxuries_boost_deposit_3
+			remove_deposit = perma_luxuries_boost_deposit_4
+			remove_deposit = perma_luxuries_boost_deposit_5
+			remove_deposit = perma_luxuries_boost_deposit_6
+			remove_deposit = perma_luxuries_boost_deposit_7
+			remove_deposit = perma_luxuries_boost_deposit_8
+			remove_deposit = perma_luxuries_boost_deposit_9
+		}
+	}
+}
