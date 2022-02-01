@@ -1,26 +1,14 @@
-namespace = perma_planertery_decisions
+namespace = perma_planetery_decisions
 
 # Check luxury cost
 planet_event = {
-	id = perma_planertery_decisions.1
+	id = perma_planetery_decisions.1
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
 		has_planet_flag = has_perma_luxuries_boost
 		has_modifier = planet_luxuries_boost
-		OR = {
-			has_deposit = perma_luxuries_boost_deposit_0
-			has_deposit = perma_luxuries_boost_deposit_1
-			has_deposit = perma_luxuries_boost_deposit_2
-			has_deposit = perma_luxuries_boost_deposit_3
-			has_deposit = perma_luxuries_boost_deposit_4
-			has_deposit = perma_luxuries_boost_deposit_5
-			has_deposit = perma_luxuries_boost_deposit_6
-			has_deposit = perma_luxuries_boost_deposit_7
-			has_deposit = perma_luxuries_boost_deposit_8
-			has_deposit = perma_luxuries_boost_deposit_9
-		}
 	}
 
 	immediate = {

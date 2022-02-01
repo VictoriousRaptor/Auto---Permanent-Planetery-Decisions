@@ -3,11 +3,11 @@ decision_planet_perma_food_boost = {
 	sound = event_administrative_work
 	icon = decision_resources
 
-	resources = {
-		category = decisions
-		cost = {
-		}
-	}
+	# resources = {
+	# 	category = decisions
+	# 	cost = {
+	# 	}
+	# }
 
 	potential = {
 		owner = {
@@ -18,6 +18,8 @@ decision_planet_perma_food_boost = {
 		NOR = {
 			has_modifier = planet_growth_discouraged
 			has_modifier = planet_population_control
+			has_modifier = planet_food_boost
+			has_planet_flag = has_perma_food_boost
 		}
 	}
 
@@ -79,10 +81,10 @@ decision_planet_perma_luxuries_boost = {
 			modifier = "planet_luxuries_boost"
 		}
 		hidden_effect = {
-			# planet_event = {
-			# 	id = permanent_decisions.0
-			# }
 			set_planet_flag = has_perma_luxuries_boost
+			planet_event = {
+				id = perma_planetery_decisions.1
+			}
 		}
 	}
 }
@@ -94,25 +96,11 @@ decision_planet_remove_perma_luxuries_boost = {
 	potential = {
 		owner = {
 			is_regular_empire = yes
-		}
-		owner = {
 			is_ai = no
 		}
 		AND = {
 			has_modifier = planet_luxuries_boost
 			has_planet_flag = has_perma_luxuries_boost
-			OR = {
-				has_deposit = perma_luxuries_boost_deposit_0
-				has_deposit = perma_luxuries_boost_deposit_1
-				has_deposit = perma_luxuries_boost_deposit_2
-				has_deposit = perma_luxuries_boost_deposit_3
-				has_deposit = perma_luxuries_boost_deposit_4
-				has_deposit = perma_luxuries_boost_deposit_5
-				has_deposit = perma_luxuries_boost_deposit_6
-				has_deposit = perma_luxuries_boost_deposit_7
-				has_deposit = perma_luxuries_boost_deposit_8
-				has_deposit = perma_luxuries_boost_deposit_9
-			}
 		}
 	}
 	effect = {
