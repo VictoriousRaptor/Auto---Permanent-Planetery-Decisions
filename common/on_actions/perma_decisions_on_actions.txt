@@ -1,0 +1,17 @@
+on_yearly_pulse = {
+	
+}
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+
+}
+
+#Fired whenever a new owner is set for a planet,
+#be it after a war or through a trade
+#From = Country scope (new owner)
+#This = Planet scope
+on_planet_transfer =  {
+
+}

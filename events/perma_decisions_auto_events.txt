@@ -1,0 +1,7 @@
+namespace = perma_planetery_decisions
+
+# New colony
+planet_event = {
+	id = perma_planetery_decisions.21
+	
+}
