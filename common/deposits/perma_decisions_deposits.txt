@@ -1,0 +1,25 @@
+perma_food_boost_deposit = {	
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			food = 8.33
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+perma_luxuries_boost_deposit = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 0.83
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}

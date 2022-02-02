@@ -1,0 +1,118 @@
+namespace = perma_decisions_menu
+
+# Main Menu
+country_event = {
+	id = perma_decisions_menu.0
+	title = "perma_decisions_menu.0.name"
+	desc = "perma_decisions_menu.0.name"
+	is_triggered_only = yes
+
+	picture = "GFX_evt_sapient_AI"
+
+	option = {
+		name = enable_auto_perma_food
+		custom_tooltip = enable_auto_perma_food.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = auto_perma_food_enabled
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = perma_decisions_menu.1
+			}
+		}
+	}
+
+	option = {
+		name = disable_auto_perma_food
+		custom_tooltip = disable_auto_perma_food.tooltip
+		trigger = {
+			has_country_flag = auto_perma_food_enabled
+		}
+		hidden_effect = {
+			
+		}
+	}
+
+	option = {
+		name = enable_auto_perma_luxury
+		custom_tooltip = enable_auto_perma_luxury.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = auto_perma_luxury_enabled
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+
+	option = {
+		name = disable_auto_perma_luxury
+		custom_tooltip = disable_auto_perma_luxury.tooltip
+		trigger = {
+			has_country_flag = auto_perma_luxury_enabled
+		}
+		hidden_effect = {
+			
+		}
+	}
+
+}
+
+# Enable auto perma_food
+country_event = {
+	id = perma_decisions_menu.1
+	title = "perma_decisions_menu.1.name"
+	desc = "perma_decisions_menu.1.name"
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = auto_perma_food_enabled
+		}
+	}
+}
+
+# Disable auto perma_food
+country_event = {
+	id = perma_decisions_menu.11
+	title = "perma_decisions_menu.11.name"
+	desc = "perma_decisions_menu.11.name"
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_country_flag = auto_perma_food_enabled
+		}
+	}
+}
+
+# Enable auto perma luxury
+country_event = {
+	id = perma_decisions_menu.2
+	title = "perma_decisions_menu.2.name"
+	desc = "perma_decisions_menu.2.name"
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = auto_perma_luxury_enabled
+		}
+	}
+}
+
+# Disable auto perma luxury
+country_event = {
+	id = perma_decisions_menu.12
+	title = "perma_decisions_menu.12.name"
+	desc = "perma_decisions_menu.12.name"
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_country_flag = auto_perma_luxury_enabled
+		}
+	}
+}

@@ -12,55 +12,56 @@ planet_event = {
 		add_modifier = {
 			modifier = "planet_luxuries_boost"
 		}
-		remove_deposit = perma_luxuries_boost_deposit_0
-		remove_deposit = perma_luxuries_boost_deposit_1
-		remove_deposit = perma_luxuries_boost_deposit_2
-		remove_deposit = perma_luxuries_boost_deposit_3
-		remove_deposit = perma_luxuries_boost_deposit_4
-		remove_deposit = perma_luxuries_boost_deposit_5
-		remove_deposit = perma_luxuries_boost_deposit_6
-		remove_deposit = perma_luxuries_boost_deposit_7
-		remove_deposit = perma_luxuries_boost_deposit_8
-		remove_deposit = perma_luxuries_boost_deposit_9
 
+		while = {
+			limit = {
+				has_deposit = perma_luxuries_boost_deposit
+			}
+			remove_deposit = perma_luxuries_boost_deposit
+		}
+
+		set_variable = {
+			which = deposit_count
+			value = 0
+		}
+		export_trigger_value_to_variable = {
+			trigger = num_pops
+			variable = deposit_count
+		}
+		divide_variable = {
+			which = deposit_count
+			value = 10
+		}
 		if = {
-  			limit = { num_pops < 10 }
-  			add_deposit = perma_luxuries_boost_deposit_0
+			limit = {
+				check_variable = {
+					which = deposit_count
+					value > 10
+				}
+			}
+			set_variable = {
+				which = deposit_count
+				value = 10
+			}
 		}
-		else_if = {
-  			limit = { num_pops < 20 }
-  			add_deposit = perma_luxuries_boost_deposit_1
+		set_variable = {
+			which = i
+			value = 1
 		}
-		else_if = {
-  			limit = { num_pops < 30 }
-  			add_deposit = perma_luxuries_boost_deposit_2
-		}
-		else_if = {
-  			limit = { num_pops < 40 }
-  			add_deposit = perma_luxuries_boost_deposit_3
-		}
-		else_if = {
-  			limit = { num_pops < 50 }
-  			add_deposit = perma_luxuries_boost_deposit_4
-		}
-		else_if = {
-  			limit = { num_pops < 60 }
-  			add_deposit = perma_luxuries_boost_deposit_5
-		}
-		else_if = {
-  			limit = { num_pops < 70 }
-  			add_deposit = perma_luxuries_boost_deposit_6
-		}
-		else_if = {
-  			limit = { num_pops < 85 }
-  			add_deposit = perma_luxuries_boost_deposit_7
-		}
-		else_if = {
-  			limit = { num_pops < 100 }
-  			add_deposit = perma_luxuries_boost_deposit_8
-		}
-		else = {
-  			add_deposit = perma_luxuries_boost_deposit_9
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value < deposit_count
+				}
+			}
+			THIS = {
+				add_deposit = perma_luxuries_boost_deposit
+			}
+			change_variable = {
+				which = i
+				value = 1
+			}
 		}
 	}
 }
@@ -121,15 +122,11 @@ planet_event = {
 	immediate = {
 		remove_modifier = planet_luxuries_boost
 		remove_planet_flag = has_perma_luxuries_boost
-		remove_deposit = perma_luxuries_boost_deposit_0
-		remove_deposit = perma_luxuries_boost_deposit_1
-		remove_deposit = perma_luxuries_boost_deposit_2
-		remove_deposit = perma_luxuries_boost_deposit_3
-		remove_deposit = perma_luxuries_boost_deposit_4
-		remove_deposit = perma_luxuries_boost_deposit_5
-		remove_deposit = perma_luxuries_boost_deposit_6
-		remove_deposit = perma_luxuries_boost_deposit_7
-		remove_deposit = perma_luxuries_boost_deposit_8
-		remove_deposit = perma_luxuries_boost_deposit_9
+		while = {
+			limit = {
+				has_deposit = perma_luxuries_boost_deposit
+			}
+			remove_deposit = perma_luxuries_boost_deposit
+		}
 	}
 }

@@ -1,11 +1,12 @@
 on_yearly_pulse = {
-	
+	perma_planetery_decisions.2  # update luxury cost, disregarding auto or not
 }
 
 # A planet has been colonized.
 # Scope = Planet
 on_colonized = {
-
+	perma_planetery_decisions.21 # Auto perma luxury
+	perma_planetery_decisions.22 # Auto perma food
 }
 
 #Fired whenever a new owner is set for a planet,
@@ -13,5 +14,8 @@ on_colonized = {
 #From = Country scope (new owner)
 #This = Planet scope
 on_planet_transfer =  {
-
+	perma_planetery_decisions.21 # Auto perma luxury
+	perma_planetery_decisions.22 # Auto perma food
+	perma_planetery_decisions.23 # ai gets planet: clear food
+	perma_planetery_decisions.24 # ai gets planet: clear luxury
 }
