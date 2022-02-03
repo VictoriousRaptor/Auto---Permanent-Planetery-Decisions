@@ -1,5 +1,6 @@
 on_yearly_pulse = {
-	perma_planetery_decisions.2  # update luxury cost, disregarding auto or not
+	perma_planetery_decisions.32  # update luxury cost, disregarding auto or not
+	perma_planetery_decisions.34  # update food cost, disregarding auto or not
 }
 
 # A planet has been colonized.
