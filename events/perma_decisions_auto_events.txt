@@ -17,7 +17,7 @@ planet_event = {
 						value > 20  # TODO changable threshold
 					}
 				}
-				free_housing > 1
+				free_housing > 0
 			}
 			planet_event = {
 				id = perma_planetery_decisions.1
@@ -94,7 +94,7 @@ planet_event = {
 }
 
 country_event = {
-	# Auto set food
+	# Annually set food
 	id = perma_planetery_decisions.34
 	is_triggered_only = yes
 	hide_window = yes
@@ -105,15 +105,15 @@ country_event = {
 				is_ai = no
 				has_country_flag = auto_perma_food_enabled
 			}
-		}
-		country_event = {
-			id = perma_planetery_decisions.4
+			country_event = {
+				id = perma_planetery_decisions.4
+			}
 		}
 	}
 }
 
 country_event = {
-	# Auto set luxury
+	# Annually set luxury
 	id = perma_planetery_decisions.32
 	is_triggered_only = yes
 	hide_window = yes
@@ -124,9 +124,123 @@ country_event = {
 				is_ai = no
 				has_country_flag = auto_perma_luxury_enabled
 			}
-		}
-		country_event = {
-			id = perma_planetery_decisions.2
+			country_event = {
+				id = perma_planetery_decisions.2
+			}
 		}
 	}
+}
+country_event = {
+	# Stats
+	# FIXME doesnt work
+	id = perma_planetery_decisions.40
+	picture = GFX_evt_sapient_AI
+	is_triggered_only = yes
+	title = "perma_planetery_decisions.stats"
+	desc = "perma_planetery_decisions.stats.desc"
+
+	immediate = {
+		if = {
+			limit = { 
+				is_ai = no
+			}
+			set_variable = {
+				which = food_ongoing
+				value = 2
+			}
+			set_variable = {
+				which = good_ongoing
+				value = 2
+			}
+			set_variable = {
+				which = food_potential
+				value = 0
+			}			
+			set_variable = {
+				which = good_potential
+				value = 0
+			}
+			set_variable = {
+				which = food_sum
+				value = 0
+			}
+			set_variable = {
+				which = good_sum
+				value = 0
+			}
+			every_owned_planet = {
+				set_variable = {
+					which = deposit_count
+					value = trigger:num_pops
+				}
+				perma_calc_deposit_cost = { COUNT = deposit_count COST = 0.83}
+				if = {
+					limit = { 
+						has_planet_flag = has_perma_food_boost		
+					}
+					prev = {
+						change_variable = {
+							which = food_ongoing
+							value = prev.deposit_count
+						}
+					}
+				} else = {
+					prev = {
+						change_variable = {
+							which = food_potential
+							value = prev.deposit_count
+						}
+					}
+				}
+				if = {
+					limit = { 
+						has_planet_flag = has_perma_luxuries_boost		
+					}
+					prev = {
+						change_variable = {
+							which = good_ongoing
+							value = prev.deposit_count
+						}
+					}
+				} else = {
+					prev = {
+						change_variable = {
+							which = good_potential
+							value = prev.deposit_count
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = food_sum
+				value = food_potential
+			}
+			set_variable = {
+				which = good_sum
+				value = good_potential
+			}
+			change_variable = {
+				which = food_sum
+				value = food_ongoing
+			}
+			change_variable = {
+				which = good_sum
+				value = good_ongoing
+			}
+		}
+	}
+
+	option = {
+		name = "perma_planetery_decisions.stats.return"
+		hidden_effect = {
+			country_event = {
+				id = perma_decisions_menu.0
+			}
+		}
+	}
+	
+	option = {
+		name = "perma_planetery_decisions.stats.exit"
+	}
+
 }
