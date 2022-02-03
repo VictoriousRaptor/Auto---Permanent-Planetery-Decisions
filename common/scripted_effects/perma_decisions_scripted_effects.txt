@@ -1,0 +1,43 @@
+perma_calc_deposit_count = {
+	divide_variable = {
+		which = $COUNT$
+		value = 10
+	}
+	ceiling_variable = $COUNT$
+	if = {
+		limit = {
+			check_variable = {
+				which = $COUNT$
+				value > 10
+			}
+		}
+		set_variable = {
+			which = $COUNT$
+			value = 10
+		}
+	}
+}
+
+perma_calc_deposit_cost = {
+	divide_variable = {
+		which = $COUNT$
+		value = 10
+	}
+	ceiling_variable = $COUNT$
+	if = {
+		limit = {
+			check_variable = {
+				which = $COUNT$
+				value > 10
+			}
+		}
+		set_variable = {
+			which = $COUNT$
+			value = 10
+		}
+	}
+	multiply_variable = {
+		which = $COUNT$
+		value = $COST$
+	}
+}

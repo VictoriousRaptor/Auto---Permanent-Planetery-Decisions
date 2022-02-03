@@ -22,6 +22,9 @@ country_event = {
 			country_event = {
 				id = perma_planetery_decisions.4
 			}
+			country_event = {
+				id = perma_decisions_menu.0
+			}
 		}
 	}
 
@@ -33,6 +36,9 @@ country_event = {
 		}
 		hidden_effect = {
 			remove_country_flag = auto_perma_food_enabled
+			country_event = {
+				id = perma_decisions_menu.0
+			}
 		}
 	}
 
@@ -45,11 +51,12 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			hidden_effect = {
-				set_country_flag = auto_perma_luxury_enabled
-				country_event = {
-					id = perma_planetery_decisions.2
-				}
+			set_country_flag = auto_perma_luxury_enabled
+			country_event = {
+				id = perma_planetery_decisions.2
+			}
+			country_event = {
+				id = perma_decisions_menu.0
 			}
 		}
 	}
@@ -62,6 +69,9 @@ country_event = {
 		}
 		hidden_effect = {
 			remove_country_flag = auto_perma_luxury_enabled
+			country_event = {
+				id = perma_decisions_menu.0
+			}
 		}
 	}
 
@@ -74,6 +84,9 @@ country_event = {
 					id = perma_planetery_decisions.3
 				}
 			}
+			country_event = {
+				id = perma_decisions_menu.0
+			}
 		}
 	}
 
@@ -85,6 +98,9 @@ country_event = {
 				planet_event = {
 					id = perma_planetery_decisions.1
 				}
+			}
+			country_event = {
+				id = perma_decisions_menu.0
 			}
 		}
 	}
@@ -99,6 +115,9 @@ country_event = {
 					id = perma_planetery_decisions.13
 				}
 			}
+			country_event = {
+				id = perma_decisions_menu.0
+			}
 		}
 	}
 
@@ -111,19 +130,21 @@ country_event = {
 					id = perma_planetery_decisions.11
 				}
 			}
+			country_event = {
+				id = perma_decisions_menu.0
+			}
 		}
 	}
 
 	option = {
-		name = perma_planetery_decisions_exit
+		name = perma_cost_stats
+		custom_tooltip = perma_cost_stats.tooltip
+		hidden_effect = {
+			country_event = {
+				id = perma_planetery_decisions.40
+			}
+		}
 	}
-}
-
-country_event = {
-	id = perma_decisions_menu.20
-	title = "perma_decisions_menu.20.name"
-	desc = "perma_decisions_menu.20.name"
-	is_triggered_only = yes
 
 	option = {
 		name = perma_planetery_decisions_exit
