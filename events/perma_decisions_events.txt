@@ -1,7 +1,7 @@
 namespace = perma_planetery_decisions
 
-# Add perma luxury or Update luxury cost
 planet_event = {
+	# Add perma luxury or Update luxury cost
 	id = perma_planetery_decisions.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -15,23 +15,20 @@ planet_event = {
 
 		while = {
 			limit = {
-				has_deposit = perma_luxuries_boost_deposit
+				has_deposit = d_perma_luxuries_boost_deposit
 			}
-			remove_deposit = perma_luxuries_boost_deposit
+			remove_deposit = d_perma_luxuries_boost_deposit
 		}
 
 		set_variable = {
 			which = deposit_count
-			value = 0
-		}
-		export_trigger_value_to_variable = {
-			trigger = num_pops
-			variable = deposit_count
+			value = trigger:num_pops
 		}
 		divide_variable = {
 			which = deposit_count
 			value = 10
 		}
+		ceiling_variable = deposit_count
 		if = {
 			limit = {
 				check_variable = {
@@ -44,30 +41,15 @@ planet_event = {
 				value = 10
 			}
 		}
-		set_variable = {
-			which = i
-			value = 1
-		}
 		while = {
-			limit = {
-				check_variable = {
-					which = i
-					value < deposit_count
-				}
-			}
-			THIS = {
-				add_deposit = perma_luxuries_boost_deposit
-			}
-			change_variable = {
-				which = i
-				value = 1
-			}
+			count = deposit_count
+			add_deposit = d_perma_luxuries_boost_deposit
 		}
 	}
 }
 
-# Update cost on every owned planet
 country_event = {
+	# Update consumer goods cost on every owned planet
 	id = perma_planetery_decisions.2
 	is_triggered_only = yes
 	hide_window = yes
@@ -84,37 +66,94 @@ country_event = {
 	}
 }
 
-# Perma food
 planet_event = {
+	# Perma food
 	id = perma_planetery_decisions.3
 	is_triggered_only = yes
 	hide_window = yes
 
 	immediate = {
-		add_deposit = perma_food_boost_deposit
+		add_deposit = d_perma_food_boost_deposit
 		remove_modifier = planet_food_boost
 		add_modifier = {
 			modifier = "planet_food_boost"
 		}
 		set_planet_flag = has_perma_food_boost
+		while = {
+			limit = {
+				has_deposit = d_perma_food_boost_deposit
+			}
+			remove_deposit = d_perma_food_boost_deposit
+		}
+
+		set_variable = {
+			which = deposit_count
+			value = trigger:num_pops
+		}
+		divide_variable = {
+			which = deposit_count
+			value = 10
+		}
+		ceiling_variable = deposit_count
+		if = {
+			limit = {
+				check_variable = {
+					which = deposit_count
+					value > 10
+				}
+			}
+			set_variable = {
+				which = deposit_count
+				value = 10
+			}
+		}
+		while = {
+			count = deposit_count
+			add_deposit = d_perma_food_boost_deposit
+		}
 	}
 }
 
-# Remove perma food
+
+country_event = {
+	# Update food cost on every owned planet
+	id = perma_planetery_decisions.4
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {	
+		every_owned_planet = {
+			if = {
+				limit = { has_planet_flag = has_perma_food_boost}
+				planet_event = {
+					id = perma_planetery_decisions.3  # update cost
+				}
+			}
+		}
+	}
+}
+
+
 planet_event = {
+	# Remove perma food
 	id = perma_planetery_decisions.13
 	is_triggered_only = yes
 	hide_window = yes
 
 	immediate = {
 		remove_modifier = planet_food_boost
-		remove_deposit = perma_food_boost_deposit
 		remove_planet_flag = has_perma_food_boost
+		while = {
+			limit = {
+				has_deposit = d_perma_food_boost_deposit
+			}
+			remove_deposit = d_perma_food_boost_deposit
+		}
 	}
 }
 
-# Remove perma luxury
 planet_event = {
+	# Remove perma luxury
 	id = perma_planetery_decisions.11
 	is_triggered_only = yes
 	hide_window = yes
@@ -124,9 +163,9 @@ planet_event = {
 		remove_planet_flag = has_perma_luxuries_boost
 		while = {
 			limit = {
-				has_deposit = perma_luxuries_boost_deposit
+				has_deposit = d_perma_luxuries_boost_deposit
 			}
-			remove_deposit = perma_luxuries_boost_deposit
+			remove_deposit = d_perma_luxuries_boost_deposit
 		}
 	}
 }

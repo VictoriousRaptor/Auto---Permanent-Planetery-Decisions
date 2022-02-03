@@ -1,118 +1,131 @@
 namespace = perma_decisions_menu
 
-# Main Menu
 country_event = {
+	# Main Menu
 	id = perma_decisions_menu.0
 	title = "perma_decisions_menu.0.name"
-	desc = "perma_decisions_menu.0.name"
+	desc = "perma_decisions_menu.0.desc"
 	is_triggered_only = yes
 
 	picture = "GFX_evt_sapient_AI"
 
 	option = {
-		name = enable_auto_perma_food
-		custom_tooltip = enable_auto_perma_food.tooltip
+		name = enable_auto_perma_food_on_new_planet
+		custom_tooltip = enable_auto_perma_food_on_new_planet.tooltip
 		trigger = {
 			NOT = {
 				has_country_flag = auto_perma_food_enabled
 			}
 		}
 		hidden_effect = {
+			set_country_flag = auto_perma_food_enabled
 			country_event = {
-				id = perma_decisions_menu.1
+				id = perma_planetery_decisions.4
 			}
 		}
 	}
 
 	option = {
-		name = disable_auto_perma_food
-		custom_tooltip = disable_auto_perma_food.tooltip
+		name = disable_auto_perma_food_on_new_planet
+		custom_tooltip = disable_auto_perma_food_on_new_planet.tooltip
 		trigger = {
 			has_country_flag = auto_perma_food_enabled
 		}
 		hidden_effect = {
-			
+			remove_country_flag = auto_perma_food_enabled
 		}
 	}
 
 	option = {
-		name = enable_auto_perma_luxury
-		custom_tooltip = enable_auto_perma_luxury.tooltip
+		name = enable_auto_perma_luxury_on_new_planet
+		custom_tooltip = enable_auto_perma_luxury_on_new_planet.tooltip
 		trigger = {
 			NOT = {
 				has_country_flag = auto_perma_luxury_enabled
 			}
 		}
 		hidden_effect = {
-			
+			hidden_effect = {
+				set_country_flag = auto_perma_luxury_enabled
+				country_event = {
+					id = perma_planetery_decisions.2
+				}
+			}
 		}
 	}
 
 	option = {
-		name = disable_auto_perma_luxury
-		custom_tooltip = disable_auto_perma_luxury.tooltip
+		name = disable_auto_perma_luxury_on_new_planet
+		custom_tooltip = disable_auto_perma_luxury_on_new_planet.tooltip
 		trigger = {
 			has_country_flag = auto_perma_luxury_enabled
 		}
 		hidden_effect = {
-			
-		}
-	}
-
-}
-
-# Enable auto perma_food
-country_event = {
-	id = perma_decisions_menu.1
-	title = "perma_decisions_menu.1.name"
-	desc = "perma_decisions_menu.1.name"
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			set_country_flag = auto_perma_food_enabled
-		}
-	}
-}
-
-# Disable auto perma_food
-country_event = {
-	id = perma_decisions_menu.11
-	title = "perma_decisions_menu.11.name"
-	desc = "perma_decisions_menu.11.name"
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			remove_country_flag = auto_perma_food_enabled
-		}
-	}
-}
-
-# Enable auto perma luxury
-country_event = {
-	id = perma_decisions_menu.2
-	title = "perma_decisions_menu.2.name"
-	desc = "perma_decisions_menu.2.name"
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			set_country_flag = auto_perma_luxury_enabled
-		}
-	}
-}
-
-# Disable auto perma luxury
-country_event = {
-	id = perma_decisions_menu.12
-	title = "perma_decisions_menu.12.name"
-	desc = "perma_decisions_menu.12.name"
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
 			remove_country_flag = auto_perma_luxury_enabled
 		}
+	}
+
+	option = {
+		name = add_all_perma_food
+		custom_tooltip = add_all_perma_food.tooltip
+		hidden_effect = {
+			every_owned_planet = {
+				planet_event = {
+					id = perma_planetery_decisions.3
+				}
+			}
+		}
+	}
+
+	option = {
+		name = add_all_perma_luxury
+		custom_tooltip = add_all_perma_luxury.tooltip
+		hidden_effect = {
+			every_owned_planet = {
+				planet_event = {
+					id = perma_planetery_decisions.1
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = remove_all_perma_food
+		custom_tooltip = remove_all_perma_food.tooltip
+		hidden_effect = {
+			every_owned_planet = {
+				planet_event = {
+					id = perma_planetery_decisions.13
+				}
+			}
+		}
+	}
+
+	option = {
+		name = remove_all_perma_luxury
+		custom_tooltip = remove_all_perma_luxury.tooltip
+		hidden_effect = {
+			every_owned_planet = {
+				planet_event = {
+					id = perma_planetery_decisions.11
+				}
+			}
+		}
+	}
+
+	option = {
+		name = perma_planetery_decisions_exit
+	}
+}
+
+country_event = {
+	id = perma_decisions_menu.20
+	title = "perma_decisions_menu.20.name"
+	desc = "perma_decisions_menu.20.name"
+	is_triggered_only = yes
+
+	option = {
+		name = perma_planetery_decisions_exit
 	}
 }

@@ -42,7 +42,6 @@ decision_planet_remove_perma_food_boost = {
 		}
 		AND = {
 			has_planet_flag = has_perma_food_boost
-			has_deposit = perma_food_boost_deposit
 		}
 	}
 
