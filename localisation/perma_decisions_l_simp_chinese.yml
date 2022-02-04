@@ -15,10 +15,10 @@
  d_perma_luxuries_boost_deposit:0 "$decision_planet_luxuries_boost$：维持费"
  perma_luxuries_boost_deposit_desc:0 "每个特征每月£consumer_goods£§Y0.83§!"
 
- perma_decisions_menu.0.name:0 "自动大撒币"
- perma_decisions_menu.0.desc:0 "设置如何自动大撒币。"
- perma_planetery_decisions.stats:0 "查看当前大撒币开销。"
- perma_planetery_decisions.stats.desc:0 "目前我们每月撒币开销大约如下：\n£food£[This.food_ongoing]\n£consumer_goods£[This.good_ongoing]\n如果在所有星球上撒币，开销预计如下：\n£food£[This.food_sum]\n£consumer_goods£[This.good_sum]"
+ perma_decisions_menu.0.name:0 "自动无限期大撒币"
+ perma_decisions_menu.0.desc:0 "设置如何自动无限期大撒币。"
+ perma_planetary_decisions.stats:0 "查看当前大撒币开销。"
+ perma_planetary_decisions.stats.desc:0 "目前我们每月撒币开销大约如下：\n£food£[This.food_ongoing]\n£consumer_goods£[This.good_ongoing]\n如果在所有星球上撒币，开销预计如下：\n£food£[This.food_sum]\n£consumer_goods£[This.good_sum]"
  enable_auto_perma_food_on_new_planet:0 "自动在新获得或新殖民的星球上$decision_planet_food_boost$。"
  enable_auto_perma_food_on_new_planet.tooltip:0 "人口越多越好。"
  disable_auto_perma_food_on_new_planet:0 "停止自动在新获得或新殖民的星球上$decision_planet_food_boost$。"
@@ -37,10 +37,10 @@
  remove_all_perma_luxury.tooltip:0 "$disable_auto_perma_luxury_on_new_planet.tooltip$"
  perma_cost_stats:0 "统计当前大撒币开销。"
  perma_cost_stats.tooltip:0 "我们每月到底撒了多少币？"
- perma_planetery_decisions_exit:0 "退出。"
+ perma_planetary_decisions_exit:0 "退出。"
 
  edict_perma_decisions_menu:0 "$perma_decisions_menu.0.name$：设置"
  edict_perma_decisions_menu_desc:0 "$perma_decisions_menu.0.desc$"
 
- perma_planetery_decisions.stats.return:0 "返回。"
- perma_planetery_decisions.stats.exit:0 "$perma_planetery_decisions_exit$"
+ perma_planetary_decisions.stats.return:0 "返回。"
+ perma_planetary_decisions.stats.exit:0 "$perma_planetary_decisions_exit$"

@@ -23,7 +23,7 @@ decision_planet_perma_food_boost = {
 		}
 		hidden_effect = {
 			planet_event = {
-				id = perma_planetery_decisions.3
+				id = perma_planetary_decisions.3
 			}
 		}
 	}
@@ -49,7 +49,7 @@ decision_planet_remove_perma_food_boost = {
 		remove_modifier = planet_food_boost
 		hidden_effect = {
 			planet_event = {
-				id = perma_planetery_decisions.13
+				id = perma_planetary_decisions.13
 			}
 		}
 	}
@@ -77,7 +77,7 @@ decision_planet_perma_luxuries_boost = {
 		}
 		hidden_effect = {
 			planet_event = {
-				id = perma_planetery_decisions.1
+				id = perma_planetary_decisions.1
 			}
 		}
 	}
@@ -101,7 +101,7 @@ decision_planet_remove_perma_luxuries_boost = {
 		remove_modifier = planet_luxuries_boost
 		hidden_effect = {
 			planet_event = {
-				id = perma_planetery_decisions.11
+				id = perma_planetary_decisions.11
 			}
 		}
 	}

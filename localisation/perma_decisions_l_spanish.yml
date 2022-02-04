@@ -15,10 +15,10 @@
  d_perma_luxuries_boost_deposit:0 "Upkeep of Distributing Luxury Goods"
  perma_luxuries_boost_deposit_desc:0 "Each deposit costs £consumer_goods£§Y-0.83§! per month"
 
- perma_decisions_menu.0.name:0 "Auto & Permanent Planetery Decisions: Settings"
- perma_decisions_menu.0.desc:0 "Auto & Permanent Planetery Decisions: Settings"
- perma_planetery_decisions.stats:0 "Check current £food£ and £consumer_goods£ costs."
- perma_planetery_decisions.stats.desc:0 "Currently it cost us this much monthly\n£food£[This.food_ongoing]\n£consumer_goods£[This.good_ongoing]\nIf we activate decisions on all planets, it will cost\n£food£[This.food_sum]\n£consumer_goods£[This.good_sum]"
+ perma_decisions_menu.0.name:0 "Auto & Permanent Planetary Decisions: Settings"
+ perma_decisions_menu.0.desc:0 "Auto & Permanent Planetary Decisions: Settings"
+ perma_planetary_decisions.stats:0 "Check current £food£ and £consumer_goods£ costs."
+ perma_planetary_decisions.stats.desc:0 "Currently it cost us this much monthly\n£food£[This.food_ongoing]\n£consumer_goods£[This.good_ongoing]\nIf we pass decisions on all planets, it will cost\n£food£[This.food_sum]\n£consumer_goods£[This.good_sum]"
  enable_auto_perma_food_on_new_planet:0 "Automaticallly $decision_planet_food_boost$ on new colonies or newly conquered planets."
  enable_auto_perma_food_on_new_planet.tooltip:0 "The more pops the merrier."
  disable_auto_perma_food_on_new_planet:0 "Stop automaticallly $decision_planet_food_boost$ on new colonies or newly conquered planets."
@@ -37,10 +37,10 @@
  remove_all_perma_luxury.tooltip:0 "$disable_auto_perma_luxury_on_new_planet.tooltip$"
  perma_cost_stats:0 "Check current £food£ and £consumer_goods£ costs."
  perma_cost_stats.tooltip:0 "How much do we spend on this every month?"
- perma_planetery_decisions_exit:0 "Exit."
+ perma_planetary_decisions_exit:0 "Exit."
 
  edict_perma_decisions_menu:0 "$perma_decisions_menu.0.name$"
  edict_perma_decisions_menu_desc:0 "$perma_decisions_menu.0.desc$"
 
- perma_planetery_decisions.stats.return:0 "Return."
- perma_planetery_decisions.stats.exit:0 "$perma_planetery_decisions_exit$"
+ perma_planetary_decisions.stats.return:0 "Return."
+ perma_planetary_decisions.stats.exit:0 "$perma_planetary_decisions_exit$"

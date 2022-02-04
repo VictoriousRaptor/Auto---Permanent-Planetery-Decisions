@@ -1,8 +1,8 @@
-namespace = perma_planetery_decisions
+namespace = perma_planetary_decisions
 
 planet_event = {
 	# add luxury when player gets new planet
-	id = perma_planetery_decisions.21
+	id = perma_planetary_decisions.21
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -20,7 +20,7 @@ planet_event = {
 				free_housing > 0
 			}
 			planet_event = {
-				id = perma_planetery_decisions.1
+				id = perma_planetary_decisions.1
 			}
 		}
 	}
@@ -28,7 +28,7 @@ planet_event = {
 
 planet_event = {
 	# add food when player gets new planet
-	id = perma_planetery_decisions.22
+	id = perma_planetary_decisions.22
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -45,7 +45,7 @@ planet_event = {
 				}
 			}
 			planet_event = {
-				id = perma_planetery_decisions.3
+				id = perma_planetary_decisions.3
 			}
 		}
 	}
@@ -53,7 +53,7 @@ planet_event = {
 
 planet_event = {
 	# Remove perma food when ai gets player's planet
-	id = perma_planetery_decisions.23
+	id = perma_planetary_decisions.23
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -66,7 +66,7 @@ planet_event = {
 				has_planet_flag = has_perma_food_boost
 			}
 			planet_event = {
-				id = perma_planetery_decisions.13
+				id = perma_planetary_decisions.13
 			}
 		}
 	}
@@ -74,7 +74,7 @@ planet_event = {
 
 planet_event = {
 	# Remove perma luxury when ai gets player's planet
-	id = perma_planetery_decisions.24
+	id = perma_planetary_decisions.24
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -87,7 +87,7 @@ planet_event = {
 				has_planet_flag = has_perma_luxuries_boost
 			}
 			planet_event = {
-				id = perma_planetery_decisions.11
+				id = perma_planetary_decisions.11
 			}
 		}
 	}
@@ -95,7 +95,7 @@ planet_event = {
 
 country_event = {
 	# Annually set food
-	id = perma_planetery_decisions.34
+	id = perma_planetary_decisions.34
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -106,7 +106,7 @@ country_event = {
 				has_country_flag = auto_perma_food_enabled
 			}
 			country_event = {
-				id = perma_planetery_decisions.4
+				id = perma_planetary_decisions.4
 			}
 		}
 	}
@@ -114,7 +114,7 @@ country_event = {
 
 country_event = {
 	# Annually set luxury
-	id = perma_planetery_decisions.32
+	id = perma_planetary_decisions.32
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -125,7 +125,7 @@ country_event = {
 				has_country_flag = auto_perma_luxury_enabled
 			}
 			country_event = {
-				id = perma_planetery_decisions.2
+				id = perma_planetary_decisions.2
 			}
 		}
 	}
@@ -133,11 +133,11 @@ country_event = {
 country_event = {
 	# Stats
 	# FIXME doesnt work
-	id = perma_planetery_decisions.40
+	id = perma_planetary_decisions.40
 	picture = GFX_evt_sapient_AI
 	is_triggered_only = yes
-	title = "perma_planetery_decisions.stats"
-	desc = "perma_planetery_decisions.stats.desc"
+	title = "perma_planetary_decisions.stats"
+	desc = "perma_planetary_decisions.stats.desc"
 
 	immediate = {
 		if = {
@@ -231,7 +231,7 @@ country_event = {
 	}
 
 	option = {
-		name = "perma_planetery_decisions.stats.return"
+		name = "perma_planetary_decisions.stats.return"
 		hidden_effect = {
 			country_event = {
 				id = perma_decisions_menu.0
@@ -240,7 +240,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "perma_planetery_decisions.stats.exit"
+		name = "perma_planetary_decisions.stats.exit"
 	}
 
 }

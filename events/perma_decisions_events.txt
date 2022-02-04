@@ -1,8 +1,8 @@
-namespace = perma_planetery_decisions
+namespace = perma_planetary_decisions
 
 planet_event = {
 	# Add perma luxury or Update luxury cost
-	id = perma_planetery_decisions.1
+	id = perma_planetary_decisions.1
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -50,7 +50,7 @@ planet_event = {
 
 country_event = {
 	# Update consumer goods cost on every owned planet
-	id = perma_planetery_decisions.2
+	id = perma_planetary_decisions.2
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -59,7 +59,7 @@ country_event = {
 			if = {
 				limit = { has_planet_flag = has_perma_luxuries_boost}
 				planet_event = {
-					id = perma_planetery_decisions.1  # update cost
+					id = perma_planetary_decisions.1  # update cost
 				}
 			}
 		}
@@ -68,7 +68,7 @@ country_event = {
 
 planet_event = {
 	# Perma food
-	id = perma_planetery_decisions.3
+	id = perma_planetary_decisions.3
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -117,7 +117,7 @@ planet_event = {
 
 country_event = {
 	# Update food cost on every owned planet
-	id = perma_planetery_decisions.4
+	id = perma_planetary_decisions.4
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -126,7 +126,7 @@ country_event = {
 			if = {
 				limit = { has_planet_flag = has_perma_food_boost}
 				planet_event = {
-					id = perma_planetery_decisions.3  # update cost
+					id = perma_planetary_decisions.3  # update cost
 				}
 			}
 		}
@@ -136,7 +136,7 @@ country_event = {
 
 planet_event = {
 	# Remove perma food
-	id = perma_planetery_decisions.13
+	id = perma_planetary_decisions.13
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -154,7 +154,7 @@ planet_event = {
 
 planet_event = {
 	# Remove perma luxury
-	id = perma_planetery_decisions.11
+	id = perma_planetary_decisions.11
 	is_triggered_only = yes
 	hide_window = yes
 

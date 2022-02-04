@@ -1,0 +1,49 @@
+[h1]Features[/h1]
+
+Still activating Distributing Luxury Goods every ten year? This mod adds two indefinite planetary decisions:
+[list]
+    [*]Permanently Encourage Pop Growth
+    [*]Permanently Distribute Luxury Goods
+[/list]
+
+And can help you
+[list]
+    [*]Automatically activate the decisions on newly conquered planets or on new colonies
+    [*]Activate the decisions on all planets with one click
+    [*]Sum the cost of the decisions
+[/list]
+
+[h1]Details[/h1]
+
+The decision costs 0.83 food or consumer goods every 10 pops per month，less than 10 pops' part also counts. [spoiler]ceil(num_pops/10)*0.83[/spoiler] This cost is updated annually.
+
+Only when you have 20 monthly food income and free housing on the planet the food decision will be auto activated. Similarly, you need 20 consumer good income to auto activate the goods decision.
+
+[b]ATTENTION, DECISIONS WON'T BE AUTOMATICALLY CANCELLED WHEN YOU ARE IN DEFICIT. YOU NEED TO MANNUALY CANCEL THEM.[/b]
+
+[h1]Usage[/h1]
+
+Edicts->Auto & Permanent Planetary Decisions: Settings
+
+[img]https://i.imgur.com/fVVaDCS.gif[/img]
+
+[h1]Others[/h1]
+
+[h2]Compatibility[/h2]
+
+Compatible with 3.2.
+
+Not achievement compatible.
+
+[h2]My other mods[/h2]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2736965712]Gray Warship With Jump Drive[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2733387271]No More Charging Battleships Or Titans[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2245491122]Locate It![/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247594997]Societal Advancement (fixed)[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2254396324]Demilitarize (fixed)[/url]
+
+[h2]GitHub[/h2]
+
+[url=https://github.com/VictoriousRaptor/Auto-And-Permanent-Planetary-Decisions]Auto-And-Permanent-Planetary-Decisions[/url]
+

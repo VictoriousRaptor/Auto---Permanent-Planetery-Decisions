@@ -1,0 +1,49 @@
+[h1]功能[/h1]
+
+还在每10年去激活星球的派发奢侈品决议吗？本mod添加了两个决议，均为无限期，直到手动取消：
+[list]
+    [*]无限期发派奢侈品
+    [*]无限期鼓励人口增长
+[/list]
+
+并且能够帮你：
+[list]
+    [*]自动在新获得的星球或者新殖民地上激活决议
+    [*]一键在所有星球上发派奢侈品、鼓励人口增长
+    [*]计算每月决议开销
+[/list]
+
+[h1]细节[/h1]
+
+决议每月每10人口花费0.83食物/消费品，不满10人按10人算。 [spoiler]ceil(num_pops/10)*0.83[/spoiler] 每年会更新这个开销。
+
+当你每月食物盈余>20时且星球上住房空余>0时才会在新星球上自动激活鼓励人口增长决议；同样的，消费品盈余>20时才会自动激活派发奢侈品决议。
+
+[b]注意，在你食物或消费品亏损时，不会自动取消决议，需要你手动取消。[/b]
+
+[h1]使用方法[/h1]
+
+法令列表中找到“自动大撒币：设置”可以设置相关功能。
+
+[img]https://i.imgur.com/fVVaDCS.gif[/img]
+
+[h1]其他[/h1]
+
+[h2]兼容性[/h2]
+
+兼容3.2.2版本。
+
+开启本mod后无法获得成就。
+
+[h2]我的其他Mod[/h2]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2736965712]Gray Warship With Jump Drive 给灰风装上跃迁引擎[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2733387271]No More Charging Battleships Or Titans 不再冲锋的战列和泰坦[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2245491122]Locate It!（战略资源与巨构定位器）[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247594997]Societal Advancement (fixed)[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2254396324]Demilitarize (fixed)[/url]
+
+[h2]GitHub[/h2]
+
+[url=https://github.com/VictoriousRaptor/Auto-And-Permanent-planetary-Decisions]Auto-And-Permanent-planetary-Decisions[/url]
+
