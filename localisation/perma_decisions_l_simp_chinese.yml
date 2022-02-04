@@ -5,7 +5,7 @@
  decision_planet_remove_perma_food_boost:0 "停止$decision_planet_food_boost$"
  decision_planet_remove_perma_food_boost_desc:0 "我们将不再分派额外的营养品来$decision_planet_food_boost$。"
  d_perma_food_boost_deposit:0 "$decision_planet_food_boost$：维持费"
- perma_food_boost_deposit_desc:0 "每月£food£§Y-8.33§!"
+ d_perma_food_boost_deposit_desc:0 "每月£food£§Y-8.33§!"
 
  decision_planet_perma_luxuries_boost:0 "无限期$decision_planet_luxuries_boost$"
  decision_planet_perma_luxuries_boost_desc:0 "$decision_planet_luxuries_boost_desc$"
@@ -13,7 +13,7 @@
  decision_planet_remove_perma_luxuries_boost_desc:0 "没有闪亮的小玩意，移民变少了。"
 
  d_perma_luxuries_boost_deposit:0 "$decision_planet_luxuries_boost$：维持费"
- perma_luxuries_boost_deposit_desc:0 "每个特征每月£consumer_goods£§Y0.83§!"
+ d_perma_luxuries_boost_deposit_desc:0 "每个特征每月£consumer_goods£§Y0.83§!"
 
  perma_decisions_menu.0.name:0 "自动无限期大撒币"
  perma_decisions_menu.0.desc:0 "设置如何自动无限期大撒币。"

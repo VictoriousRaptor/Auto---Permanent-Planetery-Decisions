@@ -2,7 +2,7 @@
 
 Still activating Distributing Luxury Goods every ten year? This mod adds two indefinite planetary decisions:
 [list]
-    [*]Permanently Encourage Pop Growth
+    [*]Permanently Encourage Pop Growth (Bringing it back)
     [*]Permanently Distribute Luxury Goods
 [/list]
 
@@ -23,7 +23,7 @@ Only when you have 20 monthly food income and free housing on the planet the foo
 
 [h1]Usage[/h1]
 
-Edicts->Auto & Permanent Planetary Decisions: Settings
+In planetary decisions and Edicts->Auto & Permanent Planetary Decisions: Settings.
 
 [img]https://i.imgur.com/fVVaDCS.gif[/img]
 
