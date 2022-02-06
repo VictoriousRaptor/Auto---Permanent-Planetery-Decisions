@@ -15,7 +15,7 @@ And can help you
 
 [h1]Details[/h1]
 
-The decision costs 0.83 food or consumer goods every 10 pops per month，less than 10 pops' part also counts. [spoiler]ceil(num_pops/10)*0.83[/spoiler] This cost is updated annually.
+The decision costs 0.83 food or consumer goods every 10 pops per month，less than 10 pops' part also counts. Each planet costs 8.3 at most. [spoiler]max(10, ceil(num_pops/10))*0.83[/spoiler] This cost is updated annually.
 
 Only when you have 20 monthly food income and free housing on the planet the food decision will be auto activated. Similarly, you need 20 consumer good income to auto activate the goods decision.
 
