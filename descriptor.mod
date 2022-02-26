@@ -5,5 +5,5 @@ tags={
 }
 name="Auto & Permanent Planetary Decisions"
 picture="thumbnail.png"
-supported_version="3.2.2"
+supported_version="3.3.*"
 remote_file_id="2742120496"

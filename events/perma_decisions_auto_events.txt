@@ -132,7 +132,6 @@ country_event = {
 }
 country_event = {
 	# Stats
-	# FIXME doesnt work
 	id = perma_planetary_decisions.40
 	picture = GFX_evt_sapient_AI
 	is_triggered_only = yes

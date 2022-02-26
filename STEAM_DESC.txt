@@ -31,7 +31,7 @@ In planetary decisions and Edicts->Auto & Permanent Planetary Decisions: Setting
 
 [h2]Compatibility[/h2]
 
-Compatible with 3.2.
+Compatible with 3.3.*.
 
 Not achievement compatible.
 
